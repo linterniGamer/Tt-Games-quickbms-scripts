@@ -1,0 +1,102 @@
+# script for QuickBMS http://aluigi.altervista.org/quickbms.htm
+
+endian big
+get GSC_SZ asize
+get FOLDER basename
+get SOME_OFFSET long
+if SOME_OFFSET >= GSC_SZ   
+    cleanexit
+endif
+get FILES long
+for i = 0 < FILES
+    get OFFSET long
+    get SIZE long
+    putarray 0 i OFFSET
+    putarray 1 i SIZE
+next i
+savepos BASE_OFFSET
+goto SOME_OFFSET
+findloc OTST binary "\x30\x54\x53\x54"
+goto OTST
+get OTST long
+get CHECK long
+if CHECK == OTST 
+    get OTST_SZ long
+endif
+for i = 0 < FILES    
+    get WIDTH long
+    get HEIGHT long
+    if WIDTH == 0 && HEIGHT == 0
+        do
+            goto 0x3c 0 seek_cur
+            get WIDTH long
+            get HEIGHT long
+            #math i - 1
+        while WIDTH == 0 && HEIGHT == 0
+    endif
+    getdstring UNK 0x18
+    get FORMAT byte
+    get ZERO byte
+    get WIDTH2 short
+    get HEIGHT2 short
+    get ONE short
+    get UNK long
+    get ZERO long
+    get UNK short
+    get FILE_NUM short
+    getdstring ZERO 0x10
+    
+    getarray OFFSET 0 i
+    getarray SIZE 1 i
+    math OFFSET + BASE_OFFSET
+    string NAME p "%s\%d.dds" FOLDER i 
+
+    endian little
+    log memory_file 0x0 0x80
+    #build dds header
+    put 0x20534444 long -1 //"DDS\x20"
+    put 0x0000007c long -1
+    put 0x000a1007 long -1
+    put HEIGHT long -1
+    put WIDTH long -1
+    put SIZE long -1
+    put 0x0 long -1
+    put 0x0 long -1 //mip maps
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x20 long -1
+    put 0x4 long -1
+    if FORMAT == 0x86
+        put 0x31545844 long -1 //DXT1
+    elif FORMAT == 0x88
+        put 0x35545844 long -1 //DXT5
+    endif
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x00401008 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+    put 0x0 long -1
+
+    endian big
+    log NAME 0x0 0x80 -1
+    append
+    log NAME OFFSET SIZE
+    append
+next i
+
+
+

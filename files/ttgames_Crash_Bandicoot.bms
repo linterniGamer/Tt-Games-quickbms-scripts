@@ -1,0 +1,158 @@
+# Crash Bandicoot: The Wrath of Cortex / Twinsanity (script 0.2)
+#   Maybe also some other old games of Tell Travellers
+# script for QuickBMS http://quickbms.aluigi.org
+
+comtype SCUMMVM7    # rnc2
+
+get EXT extension
+
+if EXT == "BD" || EXT == "BH"
+    open FDDE "BH"
+    open FDDE "BD" 1
+    get FILES long
+    for i = 0 < FILES
+        get NAMESZ long
+        getdstring NAME NAMESZ
+        get OFFSET long
+        get SIZE long
+        log NAME OFFSET SIZE 1
+    next i
+    cleanexit
+endif
+
+if EXT == "MB" || EXT == "MH"
+    open FDDE "MH"
+    open FDDE "MB" 1
+    get FILES long
+    get ALIGN long
+    for i = 0 < FILES
+        get ZERO long
+        get SIZE long
+        get OFFSET long
+        get DUMMY long
+        get ZERO long
+        log "" OFFSET SIZE 1
+    next i
+    cleanexit
+endif
+
+getdstring SIGN 3
+goto 0
+if SIGN == "RNC"
+    get NAME basename
+    get EXT extension
+    string NAME + "_unpack."
+    string NAME + EXT
+    get SIZE asize
+    goto 4
+    get XSIZE long
+    clog NAME 0 SIZE XSIZE
+    cleanexit
+endif
+
+get OFFSET long
+get SIZE long
+goto OFFSET
+get DUMMY long
+
+get FILES long
+for i = 0 < FILES
+    get OFFSET long
+    get ZSIZE long
+    get SIZE long
+    get ZIP long
+    putarray 0 i OFFSET
+    putarray 1 i ZSIZE
+    putarray 2 i SIZE
+    putarray 3 i ZIP
+    putarray 7 i 0
+next i
+
+get NAMES long
+for i = 0 < NAMES
+    get NEXT_IDX signed_short
+    get PREV_IDX signed_short
+    get NAME_OFF long
+    putarray 4 i NAME_OFF
+    putarray 5 i NEXT_IDX
+    putarray 6 i PREV_IDX
+next i
+
+get SIZE long
+savepos NAMES_OFF
+
+set PATH string ""
+set NAME string ""
+for IDX = 0 < NAMES
+    math LEVEL = 0
+    math START_IDX = IDX
+
+    # lame solution to avoid endless loops, sorry
+    getarray NEXT_IDX 5 IDX
+    getarray PREV_IDX 6 IDX
+    #if NEXT_IDX > 0
+    if PREV_IDX == 0
+        callfunction EXTRACT
+    endif
+    #endif
+
+next IDX
+
+# just in case there is something left unextracted
+for i = 0 < FILES
+    math IDX = i
+    set FNAME string ""
+    callfunction DOIT 1
+next i
+
+startfunction DOIT
+    getarray OFFSET 0 IDX
+    getarray ZSIZE  1 IDX
+    getarray SIZE   2 IDX
+    getarray ZIP    3 IDX
+    getarray DONE   7 IDX
+    if DONE == 0
+        putarray 7 IDX 1
+        if ZIP == 0
+            log FNAME OFFSET SIZE
+        else
+            clog FNAME OFFSET ZSIZE SIZE
+        endif
+    endif
+endfunction
+
+startfunction EXTRACT
+    getarray NAME_OFF 4 IDX
+    getarray NEXT_IDX 5 IDX
+    getarray PREV_IDX 6 IDX
+
+        math NAME_OFF += NAMES_OFF
+        goto NAME_OFF
+        get NAME string
+
+        math LEVEL += 1
+
+        set OLD_PATH string PATH
+
+        if IDX != NEXT_IDX
+            math IDX = NEXT_IDX
+            if IDX <= 0
+                set FNAME string PATH
+                string FNAME += NAME
+                xmath IDX "0 - IDX"
+                callfunction DOIT 1
+            else
+                string PATH += NAME
+                string PATH += /
+                callfunction EXTRACT
+            endif
+        endif
+
+        if IDX != PREV_IDX
+            set PATH string OLD_PATH
+            math IDX = PREV_IDX
+            if IDX != START_IDX
+                callfunction EXTRACT
+            endif
+        endif
+endfunction

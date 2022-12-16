@@ -1,0 +1,93 @@
+# FUSE FIB (script 0.1.4)
+#   DO NOT USE THIS SCRIPT!!! It doesn't work for various reasons:
+#       https://zenhax.com/viewtopic.php?p=26029#p26029
+#   I guess that 0x80000000 is used for encryption, not supported yet.
+# script for QuickBMS http://quickbms.aluigi.org
+
+math DISABLE_COMPRESSION = 0    # set to 1 to dump every file as-is
+math EXTRACT_AS_IS = 0  # do not enable because compressed files specify their uncompressed size... yeah senseless
+
+comtype RFPK
+idstring "FUSE1.00"
+get FILES long
+get ZERO long
+get INFO_OFF long
+get SOME_CRC long
+
+open FDDE "csv" 1 EXISTS
+if EXISTS != 0
+    for i = 0 < FILES
+        get TMP line 1
+        string ELEMENTS S TMP SOME_CRC NAME ZSIZE OFFSET
+        string SOME_CRC p "0x%s" SOME_CRC
+        putarray 0 i SOME_CRC
+        putarray 1 i NAME
+    next i
+endif
+
+goto INFO_OFF
+for i = 0 < FILES
+    get SOME_CRC long
+    get OFFSET long
+    get SIZE long
+
+    set NAME string ""
+    if EXISTS != 0
+        for x = 0 < FILES
+            getarray TMP 0 x
+            if TMP == SOME_CRC
+                getarray NAME 1 x
+                math x = FILES  # break
+            endif
+        next x
+    endif
+
+    if SIZE != 0    # avoid to dump 500 zero-size files
+
+        if EXTRACT_AS_IS != 0   # wrong!
+
+            log NAME OFFSET SIZE
+
+        else
+
+            savepos BCK_OFF
+            if SIZE & 0xf0000000    # 0x40000000 and 0x80000000
+                goto OFFSET
+                get ZSIZE long
+                savepos OFFSET
+
+                # SIZE and ZSIZE have the same flag
+                if SIZE & 0x80000000
+                    #comtype ???        # different compression?
+                    #encryption ??? ??? # usage of encryption?
+                    math SIZE = ZSIZE   # no idea...
+                    comtype copy
+                    string NAME p "%s/%s" "UNSUPPORTED" NAME
+                endif
+
+                math SIZE  & 0x0fffffff
+                math ZSIZE & 0x0fffffff
+                if DISABLE_COMPRESSION == 0
+                    clog NAME OFFSET ZSIZE SIZE
+                else
+                    log NAME OFFSET ZSIZE
+                endif
+            else
+                goto OFFSET
+                get TEST long
+                if TEST u<= 1
+                    log NAME OFFSET SIZE
+                else    # THIS IS FALSE! only some archives adopt this solution
+                    savepos OFFSET
+                    if TEST u< SIZE
+                        math SIZE = TEST
+                    endif
+                    string NAME p "%s/%s" "unknown_compression" NAME
+                    log NAME OFFSET SIZE
+                endif
+            endif
+            goto BCK_OFF
+
+        endif
+    endif
+next i
