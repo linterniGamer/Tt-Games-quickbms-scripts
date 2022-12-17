@@ -8,3 +8,9 @@ If I had to update anything from this repository, let me know here or on discord
 Tt Games Modding Discord invitation link: https://discord.gg/9gYXPka
 
 My Discord server: https://discord.gg/RrvzDAC
+
+# How to use quickbms to extract the DAT files
+RogerRoger tutorial about it: https://www.youtube.com/watch?v=_EQ3hPrh0V8
+
+Tutorial I made to start modding TCS: https://www.youtube.com/watch?v=gchonYfKs04&t=2s
+
