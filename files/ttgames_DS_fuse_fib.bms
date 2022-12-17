@@ -4,7 +4,7 @@
 #   I guess that 0x80000000 is used for encryption, not supported yet.
 # script for QuickBMS http://quickbms.aluigi.org
 
-math DISABLE_COMPRESSION = 0    # set to 1 to dump every file as-is
+math DISABLE_COMPRESSION = 1    # set to 1 to dump every file as-is (it was on 0)
 math EXTRACT_AS_IS = 0  # do not enable because compressed files specify their uncompressed size... yeah senseless
 
 comtype RFPK
