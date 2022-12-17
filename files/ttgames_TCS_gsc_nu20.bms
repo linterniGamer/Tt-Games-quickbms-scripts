@@ -1,0 +1,85 @@
+# GSC NU20 (old Lego games) work-in-progress
+#   it's a work-in-progress script that extracts only the textures.
+#   currently it's not different than the results obtained with a file ripper.
+# script for QuickBMS http://quickbms.aluigi.org
+
+getdstring SIGN 4
+goto 0
+if SIGN u== "NU20"
+    math MODE = 0
+else
+    math MODE = 1
+    get DATA_SIZE long
+    #goto DATA_SIZE 0 SEEK_CUR
+    # this is where NU20 starts but TST0 doesn't have the size of the DDS!
+    get FILES short # ERROR because it includes also the meshes and files without header!!!
+    for i = 0 < FILES
+        get DUMMY long
+        get DUMMY long
+        get DUMMY long
+        get DUMMY long
+        get DUMMY long
+        get SIZE long
+        savepos OFFSET
+        log "" OFFSET SIZE
+        math OFFSET + SIZE
+        goto OFFSET
+    next i
+    cleanexit
+endif
+
+idstring "NU20"
+get INFO_SIZE signed_long
+if INFO_SIZE < 0
+    math INFO_SIZE n INFO_SIZE
+endif
+get VER long
+get DUMMY long
+savepos TYPE_OFF
+math DATA_OFF = INFO_SIZE
+math DATA_OFF + 4   # DATA_SIZE
+for TYPE_OFF = TYPE_OFF != INFO_SIZE
+    getdstring TYPE 4
+    get TYPE_SIZE long
+    #print "%TYPE_OFF|X% %TYPE%"
+    math TYPE_OFF + TYPE_SIZE
+    string NAME p "%s/" TYPE
+
+    if TYPE u== "NTBL"
+        get LIMIT long
+        savepos TMP
+        math LIMIT + TMP
+        for i = 0
+            savepos TMP
+            if TMP == LIMIT
+                break
+            endif
+            get NAME string
+            putarray 0 i NAME
+        next i
+    elif TYPE u== "TST0"
+        math OFFSET = DATA_OFF
+        for i = 0
+            savepos TMP
+            if TMP u>= TYPE_OFF
+                break
+            endif
+            get DUMMY long
+            get DUMMY long
+            getdstring DUMMY 16
+            getdstring DUMMY 0x2c
+            get SIZE long
+            getdstring DUMMY 0x38
+            if SIZE != 0
+                log NAME OFFSET SIZE
+            endif
+            math OFFSET + SIZE
+        next i
+    else
+        xmath OFFSET "8 + (TYPE_OFF - TYPE_SIZE)"
+        xmath SIZE   "TYPE_SIZE - 8"
+        log TYPE OFFSET SIZE
+    endif
+
+    goto TYPE_OFF
+next
