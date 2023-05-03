@@ -19,3 +19,13 @@ Just simply click the green box with the word that says "Code" and then it will 
 RogerRoger tutorial about it: https://www.youtube.com/watch?v=_EQ3hPrh0V8
 
 Tutorial I made to start modding TCS: https://www.youtube.com/watch?v=gchonYfKs04&t=2s
+
+## Errors reported:
+### Why the tool isn't working after double clicking it?
+In case that happened, then do the following:
+
+1.- In the tab above, go to File -> Open Windows Powershell.
+
+2.- Put the name of the file you wanna open with its extension.
+
+3.- Follow the steps to be able to extract dat files.
