@@ -21,7 +21,7 @@ RogerRoger tutorial about it: https://www.youtube.com/watch?v=_EQ3hPrh0V8
 Tutorial I made to start modding TCS: https://www.youtube.com/watch?v=gchonYfKs04&t=2s
 
 ## Errors reported:
-### Why the tool isn't working after double clicking it?
+### 1.- Why the tool isn't working after double clicking it?
 In case that happened, then do the following:
 
 1.- In the tab above, go to File -> Open Windows Powershell.
@@ -29,3 +29,13 @@ In case that happened, then do the following:
 2.- Put the name of the file you wanna open with its extension.
 
 3.- Follow the steps to be able to extract dat files.
+
+### 2.- Why the tool doesn't extract the files contained inside the DAT files?
+It might be due to these reasons:
+
+1.- The bms script you selected is not the correct one.
+
+2.- The DAT file is not a valid one (E.g. Transformers The Game for Xbox 360).
+
+3.- The DAT files are corrupted (careful with extracting DAT files from PS3 or Xbox 360 ISOs).
+
