@@ -39,3 +39,4 @@ It might be due to these reasons:
 
 3.- The DAT files are corrupted (careful with extracting DAT files from PS3 or Xbox 360 ISOs).
 
+4.- The DAT file is too big to be processed on the memory, showing memory allocation problem on quickbms (happens with the DAT file from TCS PS3).
