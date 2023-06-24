@@ -20,7 +20,7 @@ RogerRoger tutorial about it: https://www.youtube.com/watch?v=_EQ3hPrh0V8
 
 Tutorial I made to start modding TCS: https://www.youtube.com/watch?v=gchonYfKs04&t=2s
 
-## :warning: Errors reported: $\color{#FF0000} \mathtt{\textbf{\large{4}}}$
+## :warning: Problems reported: $\color{#FF0000} \mathtt{\textbf{\large{4}}}$
 ### $\color{#FF5500} \mathtt{\textbf{\large{1.-}}}$ Why the tool isn't working after double clicking it?
 In case that happened, then do the following:
 
