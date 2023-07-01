@@ -46,7 +46,10 @@ The DAT files have not been altered, just your computer shows them with a differ
 
 If they aren't DAT files anymore, get the original DAT files and DO NOT try to open them again with a different program.
 
-### $\color{#FF5500} \mathtt{\textbf{\large{4.-}}}$ How can I extract the files that are inside a console version of the game?
+### $\color{#FF5500} \mathtt{\textbf{\large{4.-}}}$ When I open quickbms, it closes and even when I make it stay open, it says something different and the second tab doesn't open. What I would do?
+Run it as administrator and done.
+
+### $\color{#FF5500} \mathtt{\textbf{\large{5.-}}}$ How can I extract the files that are inside a console version of the game?
 It depends of which console version of the game we're talking about:
 - $\color{#FF8800} \mathtt{\textbf{\large{Android and IOS}}}$: the game files are all contained in the `.obb` file, so extract it using quickbms like it was a DAT file.
 - $\color{#FF8800} \mathtt{\textbf{\large{Xbox 360}}}$: sometimes the game comes compressed on an ISO file and we can see it contains 2 folder called `AUDIO_TS` and `VIDEO_TS`. In that case you need a tool that has been built specifically to extract Xbox 360 ISO files like **XBOX 360 ISO Extract**. By opening the tool and selecting the ISO of the game you wanna decompress, it will extract all the content from it and everything will look normal now (there would be the case in which there are no DAT files and everything is extracted, so $\color{#0066FF} \mathtt{\textbf{\large{say thanks to the devs}}}$ :innocent:).
