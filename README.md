@@ -27,7 +27,7 @@ Just simply click the green box with the word that says $\color{#00CC00} \mathtt
 [![Youtube](https://img.shields.io/badge/linterni's%20tutorial%20to%20start%20modding%20TCS-Video%20link-7289DA.svg?logo=Youtube&style=flat-circle&labelColor=FFFFFF&color=C00808&logoColor=FF0000)](https://www.youtube.com/watch?v=gchonYfKs04)
 
 # ⚠️ Problems reported
-<details><summary><h2>1. Why the tool isn't working after double clicking it?</h2></summary>
+<details><summary><h2>1. Why the tool doesn't work after double clicking it?</h2></summary>
 In case that happened, then do the following:
 
 1.- In the tab above, go to File -> Open Windows Powershell.
@@ -41,21 +41,21 @@ It might be due to these reasons:
 
 1.- The bms script you selected is not the correct one.
 
-2.- The DAT file is not a valid one (E.g. Transformers The Game for Xbox 360).
+2.- The DAT file is not valid (E.g. Transformers The Game for Xbox 360).
 
-3.- The DAT files are corrupted (careful with extracting DAT files from PS3 or Xbox 360 ISOs).
+3.- The DAT files are corrupted (careful with extracting DAT files from PS3 or Xbox 360 ISOs, check problem nº5).
 
-4.- The DAT file is too big to be processed on the memory, showing memory allocation problem on quickbms (happens with the DAT file from TCS PS3).
+4.- The DAT file is too big to be processed on the memory (quickbms shows the error memory allocation problem, happens with the DAT files from TCS PS3).
 </details>
-<details><summary><h3>3. I opened the DAT files with another program and they're not DAT files anymore. What can I do now?</h3></summary>
-The DAT files have not been altered, just your computer shows them with a different icon. What you need to check to make sure they are still DAT files is the type of file they are. If it says `DAT file` then it keeps being a DAT file and so it can be extracted easily with quickbms following the correct steps.
+<details><summary><h3>3. I've opened DAT files with another program and they're no longer DAT.</h3> <h4>What can I do?</h4></summary>
+The DAT files have not been altered, just your computer shows them with a different icon. What you need to check to make sure they are still DAT files is the type of file they are. If it says `DAT file` then it's still a DAT file and so it can be extracted easily with quickbms following the correct steps.
 
-If they aren't DAT files anymore, get the original DAT files and DO NOT try to open them again with a different program.
+If they aren't DAT files anymore, then get the original DAT files and DO NOT try to open them again with a different program.
 </details>
 <details><summary><h2>4. When I open quickbms, it closes. What I can do?</h2></summary>
-Run it as administrator and done.
+Right click on it, run it as administrator and done.
 </details>
-<details><summary><h2> 5. How can I extract the files that are inside a console version of the game?</h2></summary>
+<details><summary><h2> 5. How can I extract the files inside a console version of the game?</h2></summary>
 It depends of which console version of the game we're talking about:
 
 - $\color{#FF8800} \mathtt{\textbf{\large{Android and IOS}}}$: the game files are all contained in the `.obb` file, so extract it using quickbms like it was a DAT file.
