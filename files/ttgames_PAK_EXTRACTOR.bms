@@ -1,0 +1,24 @@
+# LEGO Lord of the Rings (PC) (PAC format) 0.1
+# 
+# Written by Ekey (h4x0r)
+# http://forum.xentax.com
+# 
+# script for QuickBMS http://quickbms.aluigi.org
+
+idstring "zV4\x12"
+get FILES long
+goto 0x18
+
+for i = 0 < FILES
+   get NOFFSET long
+   get OFFSET long
+   get SIZE long
+   get UNKNOWN long
+   get NULL long
+   get DUMMY longlong
+   savepos TEMP
+   goto NOFFSET
+   get NAME string
+   log NAME OFFSET SIZE
+   goto TEMP
+next i
