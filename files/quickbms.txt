@@ -4893,9 +4893,19 @@ Linux and the following is a quick set of examples for how using
 them for decompressing data, those 302 and 1028 are only an example
 of input and output size:
 
-Example of web API /compress:
-POST http://127.0.0.1:1234/compress?algo=zlib&size=1028
-Content is compressed input "as-is" (application/octet-stream)
+secrets
+import secrets
+import requests
+
+url = 'http://127.0.0.1:1234/crypt'
+algo = 'aes'
+key = '0123456789abcdef'
+
+content = secrets.token_bytes(16)  # Generate a random 16-byte (128-bit) key for encryption
+params = {'algo': algo, 'key': key}
+response = requests.post(url, params=params, data=content)
+
+print(response.text)
 
 Example of web API /crypt:
 POST http://127.0.0.1:1234/crypt?algo=aes&key=0123456789abcdef
