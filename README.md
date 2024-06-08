@@ -18,6 +18,7 @@ If I had to update anything from this repository, please let me know here or on 
 
 [![Discord](https://img.shields.io/badge/linterni%20Gamer's%20Discord%20Server-Invitation%20link-7289DA.svg?logo=Discord&style=flat-circle&logoColor=0051FF&labelColor=04192E&color=731FDD)](https://discord.gg/RrvzDAC)
 
+Back to [📑 Index](#-index).
 # 💾 How to download the files of this repository
 Just simply click the green box with the word that says $\color{#00CC00} \mathtt{'Code'}$ and then it will open a small window. On that window, select the option $\color{#FF8800} \mathtt{'Download ZIP'}$. It will download all the files in your PC. When the process is done, go to where the ZIP file was downloaded and extract its content there. After that you are free to use the tool 😉.
 
@@ -26,6 +27,7 @@ Just simply click the green box with the word that says $\color{#00CC00} \mathtt
 
 [![Youtube](https://img.shields.io/badge/linterni's%20tutorial%20to%20start%20modding%20TCS-Video%20link-7289DA.svg?logo=Youtube&style=flat-circle&labelColor=FFFFFF&color=C00808&logoColor=FF0000)](https://www.youtube.com/watch?v=gchonYfKs04)
 
+Back to [📑 Index](#-index).
 # ⚠️ Problems reported
 <details><summary><h2>1. Why the tool doesn't work after double clicking it?</h2></summary>
 In case that happened, then do the following:
@@ -71,3 +73,5 @@ It depends of which console version of the game we're talking about:
 
 - $\color{#FF8800} \mathtt{\textbf{\large{PSP}}}$: Use UMGDen to extract the files. A good example of having issues here with DAT files is **Transformers: The Game** on this console version. **There are no DAT files** and the files contained inside of it contain unknown extensions that make us $\color{#FF0000} \mathtt{\textbf{\large{unavailable to extract them}}}$.
 </details>
+
+Back to [📑 Index](#-index).
