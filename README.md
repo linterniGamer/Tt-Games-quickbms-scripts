@@ -55,7 +55,7 @@ The DAT files have not been altered, just your computer shows them with a differ
 If they aren't DAT files anymore, then get the original DAT files and DO NOT try to open them again with a different program.
 </details>
 <details><summary><h2>4. When I open quickbms, it closes. What I can do?</h2></summary>
-Right click on it, run it as administrator and done.
+Right click on it, run it as administrator and done. This problem has been reported to happen on Windows 11 so by running the tool as administrator solves the problem.
 </details>
 <details><summary><h2> 5. How can I extract the files inside a console version of the game?</h2></summary>
 It depends of which console version of the game we're talking about:
