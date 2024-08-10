@@ -1,12 +1,12 @@
 <h1><p align="center"><b>Tt Games - quickbms scripts</b></p></h1>
 
 # 📑 Index
-- [❗❗ Disclaimer](#-disclaimer)
+- [❗ Disclaimer](#-disclaimer)
 - [💾 Download](#-how-to-download-the-files-of-this-repository)
 - [☑️ Quickbms Usage](#️-how-to-use-quickbms)
-- [⚠️ Problems reported (5)](#️-problems-reported)
+- [⚠️ Problems reported (6)](#️-problems-reported)
 
-# ❗❗ Disclaimer
+# ❗ Disclaimer
 This repository has been made just with the intention of preserve the script versions I use while modding games made by Tt games. This might either be used to extract the content inside the DAT files of the game or for a different purpose.
 
 $\color{#0055FF} \mathtt{\textbf{All credit goes to quickbms developers cause I didn't make any of these scripts or the quickbms tool.}}$
@@ -72,6 +72,16 @@ It depends of which console version of the game we're talking about:
 - $\color{#FF8800} \mathtt{\textbf{\large{PS3}}}$: the files are all contained in a `.pkg` file, so using **PSN PKG Decryptor & Extractor** should convert it to iso. From there just extract the files of the iso normally. If there were no DAT files and some weird files ended on 60000 or something like that, **those files are a fragmented DAT file** you will need to join using a hex editor to be able to extract the content inside of it.
 
 - $\color{#FF8800} \mathtt{\textbf{\large{PSP}}}$: Use UMGDen to extract the files. A good example of having issues here with DAT files is **Transformers: The Game** on this console version. **There are no DAT files** and the files contained inside of it contain unknown extensions that make us $\color{#FF0000} \mathtt{\textbf{\large{unavailable to extract them}}}$.
+</details>
+
+<details><summary><h2> 6. How can I extract the files on macOS and Linux?</h2></summary>
+Fortunately, quickbms can be run on both of them. You can download them here:
+  
+- $\color{#00FF00} \mathtt{\textbf{\large{Linux}}}$: [Download](https://aluigi.altervista.org/papers/quickbms-src-0.12.0.zip).
+
+- $\color{#00FF00} \mathtt{\textbf{\large{macOS}}}$: [Download](https://github.com/ryopei/quickbms-macos/releases/tag/v0.8.0).
+
+When you have download them, remember to use the bms files left on this repository due to be the most recent version.
 </details>
 
 Back to [📑 Index](#-index).
