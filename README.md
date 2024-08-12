@@ -16,7 +16,7 @@ If I had to update anything from this repository, please let me know here or on 
 
 [![Discord](https://img.shields.io/badge/TT%20Games%20Modding%20Discord-Invitation%20link-7289DA.svg?logo=Discord&style=flat-circle&labelColor=04192E&color=003EAB&logoColor=1FDDC9)](https://discord.gg/9gYXPka)
 
-[![Discord](https://img.shields.io/badge/linterni%20Gamer's%20Discord%20Server-Invitation%20link-7289DA.svg?logo=Discord&style=flat-circle&logoColor=0051FF&labelColor=04192E&color=731FDD)](https://discord.gg/RrvzDAC)
+[![Discord](https://img.shields.io/badge/linterni%20Gamer's%20Discord%20Server-Invitation%20link-7289DA.svg?logo=Discord&style=flat-circle&logoColor=0051FF&labelColor=04192E&color=731FDD)](https://discord.gg/KdQpTzQybu)
 
 Back to [📑 Index](#-index).
 # 💾 How to download the files of this repository
