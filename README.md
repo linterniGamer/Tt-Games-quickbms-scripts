@@ -76,12 +76,10 @@ It depends of which console version of the game we're talking about:
 
 <details><summary><h2> 6. How can I extract the files on macOS and Linux?</h2></summary>
 Fortunately, quickbms can be run on both of them. You can download them here:
-  
-- $\color{#00FF00} \mathtt{\textbf{\large{Linux}}}$: [Download](https://aluigi.altervista.org/papers/quickbms-src-0.12.0.zip).
-
-- $\color{#00FF00} \mathtt{\textbf{\large{macOS}}}$: [Download](https://github.com/ryopei/quickbms-macos/releases/tag/v0.8.0).
-
-When you have download them, remember to use the bms files left on this repository due to be the most recent version.
+   
+- $\color{#00FF00} \mathtt{\textbf{\large{Linux}}}$: [Download](https://aluigi.altervista.org/papers/quickbms-src-0.12.0.zip). The game will have the same structure as normal: DAT files you have to extract (remember to use the bms files left on this repository to not have problems extracting).
+ 
+- $\color{#00FF00} \mathtt{\textbf{\large{macOS}}}$: On macOS there is an extra step to take. There is a file inside the folder `Contents` (located in `GameName`/`GameName`.app/) and this file has as extension `.dmg`. This file contains the DAT files of the game so we have to extract it. It can either be extracted using 7zip for macOS or using DMG Extractor. Once it's done, now we can see we have a Data folder with all the DAT files there. To use quickbms on macOS, you can get it from here: [Download](https://github.com/ryopei/quickbms-macos/releases/tag/v0.8.0) (remember to use the bms files left on this repository to not have problems extracting).
 </details>
 
 Back to [📑 Index](#-index).
