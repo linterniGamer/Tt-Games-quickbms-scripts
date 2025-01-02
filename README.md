@@ -4,7 +4,7 @@
 - [❗ Disclaimer](#-disclaimer)
 - [💾 Download](#-how-to-download-the-files-of-this-repository)
 - [☑️ Quickbms Usage](#️-how-to-use-quickbms)
-- [⚠️ Problems reported (6)](#️-problems-reported)
+- [⚠️ Problems reported (7)](#️-problems-reported)
 
 # ❗ Disclaimer
 This repository has been made just with the intention of preserve the script versions I use while modding games made by Tt games. This might either be used to extract the content inside the DAT files of the game or for a different purpose.
@@ -20,7 +20,7 @@ If I had to update anything from this repository, please let me know here or on 
 
 Back to [📑 Index](#-index).
 # 💾 How to download the files of this repository
-Just simply click the green box with the word that says $\color{#00CC00} \mathtt{'Code'}$ and then it will open a small window. On that window, select the option $\color{#FF8800} \mathtt{'Download ZIP'}$. It will download all the files in your PC. When the process is done, go to where the ZIP file was downloaded and extract its content there. After that you are free to use the tool 😉.
+Just simply click the green box with the word that says $\color{#00CC00} \mathtt{'Code'}$ and then it will open a small window. On that window, select the option $\color{#FF8800} \mathtt{'Download\ ZIP'}$. It will download all the files in your PC. When the process is done, go to where the ZIP file was downloaded and extract its content there. After that you are free to use the tool 😉.
 
 # ☑️ How to use quickbms
 [![Youtube](https://img.shields.io/badge/RogerRoger%20tutorial%20about%20it-Video%20link-7289DA.svg?logo=Youtube&style=flat-circle&labelColor=FFFFFF&color=C00808&logoColor=FF0000)](https://www.youtube.com/watch?v=_EQ3hPrh0V8)
@@ -82,4 +82,7 @@ Fortunately, quickbms can be run on both of them. You can download them here:
 - $\color{#00FF00} \mathtt{\textbf{\large{macOS}}}$: On macOS there is an extra step to take. There is a file inside the folder `Contents` (located in `GameName`/`GameName`.app/) and this file has as extension `.dmg`. This file contains the DAT files of the game so we have to extract it. It can either be extracted using 7zip for macOS or using DMG Extractor. Once it's done, now we can see we have a Data folder with all the DAT files there. To use quickbms on macOS, you can get it from here: [Download](https://github.com/ryopei/quickbms-macos/releases/tag/v0.8.0) (remember to use the bms files left on this repository to not have problems extracting).
 </details>
 
+<details><summary><h2> 7. Quickbms can extract sonicr-sonicrgc.dat from Sonic R Nintendo Gamecube?</h2></summary>
+Yes. Somehow, the DAT file is compatible with the actual ones. Just use the ttgames.bms script to extract it 🙂.
+   
 Back to [📑 Index](#-index).
