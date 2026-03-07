@@ -4,6 +4,7 @@
 - [❗ Disclaimer](#-disclaimer)
 - [💾 Download](#-how-to-download-the-files-of-this-repository)
 - [☑️ Quickbms Usage](#️-how-to-use-quickbms)
+- [🗂️ Different quickbms scripts](#️-bms-scripts-usages)
 - [⚠️ Problems reported (7)](#️-problems-reported)
 
 # ❗ Disclaimer
@@ -26,6 +27,61 @@ Just simply click the green box with the word that says $\color{#00CC00} \mathtt
 [![Youtube](https://img.shields.io/badge/RogerRoger%20tutorial%20about%20it-Video%20link-7289DA.svg?logo=Youtube&style=flat-circle&labelColor=FFFFFF&color=C00808&logoColor=FF0000)](https://www.youtube.com/watch?v=_EQ3hPrh0V8)
 
 [![Youtube](https://img.shields.io/badge/linterni's%20tutorial%20to%20start%20modding%20TCS-Video%20link-7289DA.svg?logo=Youtube&style=flat-circle&labelColor=FFFFFF&color=C00808&logoColor=FF0000)](https://www.youtube.com/watch?v=gchonYfKs04)
+
+Back to [📑 Index](#-index).
+# 🗂️ Bms scripts usages
+These are the many uses these bms scripts have:
+
+| Game | Files | Bms Script | Quickbms Executable |
+| --- | --- | --- | --- |
+| Sonic R (Gamecube) | sonicr-sonicrgc.dat | ttgames.bms | quickbms.exe |
+| Toy Story 2: Buzz Lightyear to the Rescue (PS1) | VB File inside SFX folder | ttgames_Crash_Bandicoot.bms | quickbms.exe |
+| Crash Bandicoot: The Wrath of Cortex | VB Files | ttgames_Crash_Bandicoot.bms | quickbms.exe |
+| Haven: Call of the King | rwlds.dat | ttgames.bms | quickbms.exe |
+| Finding Nemo | DAT files | ttgames.bms | quickbms.exe |
+| Crash Twinsanity | VB Files | ttgames_Crash_Bandicoot.bms | quickbms.exe |
+| LEGO Star Wars: The Video Game (PS2, PC) | game.dat, sfx.dat | ttgames.bms | quickbms.exe |
+| The Chronicles of Narnia: The Lion, the Witch and the Wardrobe | narnia.dat | ttgames.bms | quickbms.exe |
+| LEGO Star Wars 2: The Original Trilogy | game.dat | ttgames.bms | quickbms.exe |
+| Bionicle Heroes | bionicle.dat | ttgames.bms | quickbms.exe |
+| LEGO Star Wars: The Complete Saga | DAT files | ttgames.bms | quickbms.exe |
+| Lego Indiana Jones: The Original Adventures | DAT files | ttgames.bms | quickbms.exe |
+| Lego Batman: The Videogame | DAT files | ttgames.bms | quickbms.exe |
+| Transformers: The Game | DAT files | ttgames.bms | quickbms.exe |
+| The Chronicles of Narnia: Prince Caspian | DAT files | ttgames.bms | quickbms.exe |
+| Lego Indiana Jones 2: The Adventure Continues | DAT files | ttgames.bms | quickbms.exe |
+| Lego Harry Potter: Years 1–4 | DAT files | ttgames.bms | quickbms.exe |
+| Lego Star Wars III: The Clone Wars | DAT files | ttgames.bms | quickbms.exe |
+| Lego Pirates of the Caribbean: The Video Game | DAT files | ttgames.bms | quickbms.exe |
+| Lego Harry Potter: Years 5–7 | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Batman 2: DC Super Heroes | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego The Lord of the Rings | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego City Undercover | DAT files | ttgames_LCU.bms | quickbms_4gb_files.exe |
+| Lego Marvel Super Heroes | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego The Hobbit | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Batman 3: Beyond Gotham | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Batman 3: Beyond Gotham (PS3) | DAT files | ttgames_TFA.bms | quickbms_4gb_files.exe |
+| The LEGO Movie Videogame | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Dimensions | DAT files | ttgames_dimensions.bms | quickbms_4gb_files.exe |
+| Lego Marvel's Avengers | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Worlds | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Star Wars: The Force Awakens | DAT files | ttgames_TFA.bms | quickbms_4gb_files.exe |
+| Lego Jurassic World | DAT files | ttgames_TFA.bms | quickbms_4gb_files.exe |
+| Lego The Lego Ninjago Movie Video Game | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Marvel Super Heroes 2 | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego The Incredibles | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego DC Super-Villains | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| The Lego Movie 2 Videogame | DAT files | ttgames.bms | quickbms_4gb_files.exe |
+| Lego Star Wars: The Skywalker Saga | DAT files | ttgames_TSS.bms | quickbms_4gb_files.exe |
+| LEGO Harry Potter Collection | DATWIN files | lego_hp_collection_datwin.bms | quickbms_4gb_files.exe |
+
+$\color{#FF8800} \mathtt{Note:\ The\ LEGO\ Harry\ Potter\ Collection\ bms\ script\ has\ not\ been\ fully\ tested\ and\ may\ be\ unstable.}$
+- ttgames_DS_fuse_fib.bms - Used normally on Nintendo DS, Nintendo 3DS and PSP builds to extract fib files.
+- ttgames_PAK_EXTRACTOR.bms - Use to extract the files inside a PAK file (works with any game).
+- ttgames_TCS_gsc_nu20.bms - Use with LEGO Star Wars The Complete Saga to extract the textures of the levels (GSC files).
+- ttgames_TSS_textures_v5.bms - Use with LEGO Star Wars The Skywalker Saga to transform .TEXTURE files to DDS files (that can be read by paint.net).
+- ttgames_TransformersTheGame_PS3_gsc2dds.bms - Use on Transformers The Game PS3 to extract the textures of the levels (GSC files) and turn them into DDS files (that can be read by paint.net).
+
 
 Back to [📑 Index](#-index).
 # ⚠️ Problems reported
