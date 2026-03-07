@@ -1,0 +1,31 @@
+# QuickBMS script to extract/reimport raw DATWIN (TT Games)
+# Autor: Jack Cabrero
+
+get FOLDER basename
+get EXT extension
+if EXT != "datwin"
+	print "This is script is for datwin files!"
+	cleanexit
+endif
+
+comtype lzham # It is kept for compatibility, not used when extracting raw.
+get INDEX_OFF longlong
+get INDEX_SIZE longlong
+goto INDEX_OFF
+
+get IS_FOLDER long
+get FILES long
+
+for i = 0 < FILES
+	get OFFSET longlong
+	get TYPE long 
+	get ZSIZE long 
+	get SIZE long 
+	get FLAGS long 
+
+	# Raw file name (no extension)
+	string NAME p "%s/%08d." FOLDER i
+
+	# Raw extraction: Take the exact block from the DATWIN
+	log NAME OFFSET ZSIZE
+next i
