@@ -36,6 +36,7 @@ These are the many uses these bms scripts have:
 | --- | --- | --- | --- |
 | Sonic R (Gamecube) | sonicr-sonicrgc.dat | ttgames.bms | quickbms.exe |
 | Toy Story 2: Buzz Lightyear to the Rescue (PS1) | VB File inside SFX folder | ttgames_Crash_Bandicoot.bms | quickbms.exe |
+| Muppet RaceMania (PS1) | VB File inside SFX folder | ttgames_Crash_Bandicoot.bms | quickbms.exe |
 | Crash Bandicoot: The Wrath of Cortex | VB Files | ttgames_Crash_Bandicoot.bms | quickbms.exe |
 | Haven: Call of the King | rwlds.dat | ttgames.bms | quickbms.exe |
 | Finding Nemo | DAT files | ttgames.bms | quickbms.exe |
